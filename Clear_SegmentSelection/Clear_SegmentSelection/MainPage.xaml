@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+             x:Class="Clear_SegmentSelection.MainPage">
+    <Grid RowDefinitions="0.5*, Auto">
+        <buttons:SfSegmentedControl x:Name="segment"
+                                    HeightRequest="40"
+                                    Background="Transparent" 
+                                    SelectedIndex="1"
+                                    BackgroundColor="Transparent">
+            <buttons:SfSegmentedControl.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Day</x:String>
+                    <x:String>Week</x:String>
+                    <x:String>Month</x:String>
+                    <x:String>Year</x:String>
+                </x:Array>
+            </buttons:SfSegmentedControl.ItemsSource>
+        </buttons:SfSegmentedControl>
+        <Button Text="Clear Selection" Grid.Row="1" Clicked="OnButtonClicked" WidthRequest="150"/>
+    </Grid>
+    
+</ContentPage>
